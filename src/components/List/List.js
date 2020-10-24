@@ -4,24 +4,27 @@ import ReactHtmlParser from 'react-html-parser';
 import styles from './List.scss';
 import Hero from '../Hero/Hero';
 import Column from '../Column/Column.Container';
-// import Creator from '../Creator/Creator';
+import Creator from '../Creator/Creator';
 import { settings } from '../../data/dataStore';
 
 
 class List extends React.Component {
-
-  static propTypes = {
-    title: PropTypes.node.isRequired,
-    description: PropTypes.node,
-    columns: PropTypes.array,
-    image: PropTypes.node,
-  }
   static defaultProps = {
     description: settings.defaultListDescription,
   }
 
+  static propTypes = {
+    columns: PropTypes.object,
+    title: PropTypes.node.isRequired,
+    description: PropTypes.node,
+
+    image: PropTypes.node,
+    addColumn: PropTypes.func,
+  }
+
   render() {
-    const { columns, title, image, description } = this.props;
+    const { columns, addColumn, title, image, description } = this.props;
+
     return (
       <section className={styles.component}>
         <Hero titleText={title} image={image} />
@@ -33,9 +36,9 @@ class List extends React.Component {
             <Column key={columnData.id} {...columnData} />
           ))}
         </div>
-        {/* <div className={styles.creator}>
-          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
-        </div>  */}
+        <div className={styles.creator}>
+          <Creator text={settings.columnCreatorText} action={addColumn} />
+        </div>
       </section>
     );
   }

@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import styles from './Column.scss';
 import Card from '../Card/Card';
 // import Creator from '../Creator/Creator';
-// import { settings } from '../../data/dataStore';
+import { settings } from '../../data/dataStore';
 import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
+
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
+  }
 
   state = {
     cards: this.props.cards || [],
@@ -27,6 +31,7 @@ class Column extends React.Component {
     ));
   }
   render() {
+    { console.log('cards.map', cards); }
     const { cards, icon, title } = this.props;
     return (
       <section className={styles.component}>
