@@ -6,7 +6,7 @@ import Hero from '../Hero/Hero';
 import Column from '../Column/Column.Container';
 import Creator from '../Creator/Creator';
 import { settings } from '../../data/dataStore';
-
+import Container from '../Container/Container';
 
 class List extends React.Component {
   static defaultProps = {
@@ -39,6 +39,7 @@ class List extends React.Component {
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={addColumn} />
         </div>
+        <Container />
       </section>
     );
   }
