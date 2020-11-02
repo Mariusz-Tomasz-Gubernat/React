@@ -12,6 +12,27 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  header: {
+    icon_cat: 'mask',
+    navlink_home: 'HOME',
+    navlink_info: 'INFO',
+    navlink_faq: 'FAQ',
+  },
+};
+
+export const Info_Store = {
+  hero_image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  title_image: '<p>REACT IS AWESOME!!!</p>',
+  title: 'Info',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+};
+
+export const FAQ_Store = {
+  title: 'I LOVE REACT',
+  hero_image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  title_image: '<p>I can do all the things!!!</p>',
+  subtitle: 'React is awesome technology',
+  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quidem quaerat praesentium distinctio nisi fuga necessitatibus similique veniam tempore quibusdam eligendi vero fugiat, cum rem excepturi iusto dolor officiis velit provident nobis officia magni, eveniet enim! Cum repellendus sapiente voluptatum voluptatibus consectetur quaerat quisquam illo non molestias, incidunt recusandae ipsam, praesentium assumenda illum quas hic itaque excepturi doloribus soluta quibusdam veritatis placeat eius sit! A sequi incidunt nisi veritatis possimus sit nesciunt pariatur eveniet quisquam distinctio facere nulla laboriosam nobis est commodi accusantium nostrum repudiandae voluptatum, cupiditate vero nemo corporis? Rem a, libero atque impedit vel ipsam perspiciatis sint quidem?',
 };
 
 export const pageContents = {
@@ -22,7 +43,6 @@ export const pageContents = {
 export const listData = {
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
-  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   columns: [
     {
       key: 0,
