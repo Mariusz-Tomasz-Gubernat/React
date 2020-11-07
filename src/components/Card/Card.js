@@ -3,18 +3,16 @@ import styles from './Card.scss';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
+  static propTypes = {
+    title: PropTypes.string,
+  };
   render() {
     const { title } = this.props;
     return (
-      <div className={styles.component}>
+      <section className={styles.component}>
         <h3>{title}</h3>
-      </div>
+      </section>
     );
   }
 }
-
-Card.propTypes = {
-  title: PropTypes.node,
-};
-
 export default Card;

@@ -1,18 +1,29 @@
 import React from 'react';
 import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Faq from '../FAQ/Faq';
+import List from '../List/ListContainer';
 import MainLayout from '../MainLayout/MainLayout';
-import FAQ from '../FAQ/FAQ';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { AnimatedSwitch } from 'react-router-transition';
+import styles from '../App/App.scss';
+import SearchResults from '../SearchResults/SearchResultsContainer';
 
 const App = () => (
   <BrowserRouter>
     <MainLayout>
-      <Switch>
+      <AnimatedSwitch
+        atEnter={{ opacity: 0 }}
+        atLeave={{ opacity: 0 }}
+        atActive={{ opacity: 1 }}
+        className={styles.switchWrapper}
+      >
         <Route exact path='/' component={Home} />
         <Route exact path='/info' component={Info} />
-        <Route exact path='/FAQ' component={FAQ} />
-      </Switch>
+        <Route exact path='/faq' component={Faq} />
+        <Route exact path='/list/:id' component={List} />
+        <Route exact path='/search/:searchString' component={SearchResults} />
+      </AnimatedSwitch>
     </MainLayout>
   </BrowserRouter>
 );
